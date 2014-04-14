@@ -9,7 +9,7 @@ public class TestController {
 
     @RequestMapping("/")
     public String home(ModelMap modelMap) {
-        modelMap.addAttribute("title", "Home");
-        return "home";
+        modelMap.addAttribute("title", "CRM Demo");
+        return "forward:/user/home";
     }
 }

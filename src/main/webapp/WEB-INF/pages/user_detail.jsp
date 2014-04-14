@@ -2,7 +2,6 @@
 <html>
 <head>
     <%@ include file="header.jsp"%>
-    <title>${title}</title>
 </head>
 <body>
     <div class="container">
@@ -11,23 +10,24 @@
             <div class="form-group">
                 <label for="firstName" class="col-sm-2 control-label">First Name</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                    <input type="text" class="form-control" id="firstName" name="firstName" value="${user.firstName}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="lastName" class="col-sm-2 control-label">Last Name</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                    <input type="text" class="form-control" id="lastName" name="lastName" value="${user.lastName}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    <input type="email" class="form-control" id="email" name="email" value="${user.email}">
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
+                    <input name="id" value="${user.id}" type="hidden"/>
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
             </div>
