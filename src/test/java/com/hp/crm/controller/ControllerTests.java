@@ -32,7 +32,7 @@ public class ControllerTests {
 
     @Test
     public void simple() throws Exception {
-        mockMvc.perform(get("/"))
+        mockMvc.perform(get("/user/home"))
                .andExpect(status().isOk())
                .andExpect(view().name("home"));
     }
