@@ -44,4 +44,13 @@ public class UserServiceImpl implements UserService {
         logger.info("updateUser() end");
     }
 
+    @Override
+    public void deleteUser(long id) throws Exception{
+        User user = userDao.findUserById(id);
+        if (user == null) {
+            throw new Exception("User doesn't exist!");
+        }
+        userDao.deleteUser(user);
+    }
+
 }

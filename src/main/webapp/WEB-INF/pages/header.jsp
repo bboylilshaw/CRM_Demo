@@ -4,3 +4,4 @@
 <link rel="stylesheet" href="resources/css/style.css"/>
 <script src="resources/javascript/jquery.min.1.10.2.js"></script>
 <script src="resources/javascript/bootstrap.min.js"></script>
+<script src="resources/javascript/app.js"></script>

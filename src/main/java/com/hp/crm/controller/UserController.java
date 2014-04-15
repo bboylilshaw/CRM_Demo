@@ -31,8 +31,8 @@ public class UserController {
         return "redirect:/user/home";
     }
 
-    @RequestMapping(value = "/id/{id}", method = RequestMethod.GET)
-    public String getUser(@PathVariable int id, ModelMap modelMap) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String getUser(@PathVariable long id, ModelMap modelMap) {
         User user = userService.getUserById(id);
         modelMap.addAttribute("user", user);
         return "user_detail";
@@ -43,4 +43,15 @@ public class UserController {
         userService.updateUser(user);
         return "redirect:/user/home";
     }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String deleteUser(@PathVariable long id) {
+        try {
+            userService.deleteUser(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "redirect:/user/home";
+    }
+
 }

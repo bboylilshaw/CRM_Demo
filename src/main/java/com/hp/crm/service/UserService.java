@@ -13,4 +13,7 @@ public interface UserService {
     public void addUser(User user);
 
     public void updateUser(User user);
+
+    public void deleteUser(long id) throws Exception;
+
 }

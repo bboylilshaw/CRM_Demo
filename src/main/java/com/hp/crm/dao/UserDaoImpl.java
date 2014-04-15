@@ -47,4 +47,9 @@ public class UserDaoImpl implements UserDao {
         sessionFactory.getCurrentSession().update(user);
         logger.info("updateUser end");
     }
+
+    @Override
+    public void deleteUser(User user) {
+        sessionFactory.getCurrentSession().delete(user);
+    }
 }

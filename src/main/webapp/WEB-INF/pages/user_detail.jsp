@@ -27,8 +27,8 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
-                    <input name="id" value="${user.id}" type="hidden"/>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <input type="hidden" name="id" value="${user.id}" />
+                    <button type="submit" class="btn btn-sm btn-primary" id="update"><span class="glyphicon glyphicon-check"></span> Update</button>
                 </div>
             </div>
         </form>

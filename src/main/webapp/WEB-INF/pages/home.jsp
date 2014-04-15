@@ -2,7 +2,6 @@
 <html>
 <head>
     <%@ include file="header.jsp"%>
-    <title>${title}</title>
 </head>
 <body>
     <div class="container">
@@ -26,7 +25,7 @@
     </div>
     <div class="col-lg-12">
         <h3 class="sub-header">All Users:</h3>
-        <table class="table">
+        <table class="table" id="users">
             <thead>
             <tr>
                 <th>ID</th>
@@ -43,7 +42,10 @@
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
                     <td>${user.email}</td>
-                    <td><a href="user/id/${user.id}">Edit</a></td>
+                    <td>
+                        <a href="user/${user.id}" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a href="user/delete/${user.id}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
