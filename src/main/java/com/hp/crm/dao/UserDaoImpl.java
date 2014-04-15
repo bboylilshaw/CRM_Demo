@@ -18,6 +18,7 @@ public class UserDaoImpl implements UserDao {
     private SessionFactory sessionFactory;
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<User> findAllUsers() {
         logger.info("findAllUsers start");
         List<User> users = sessionFactory.getCurrentSession().createQuery("from User").list();
