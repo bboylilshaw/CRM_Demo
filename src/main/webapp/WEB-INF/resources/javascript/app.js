@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
     $("#deleteBtn").on("click", function(event){
-        var answer = confirm("Are you sure you want to delete this item?");
-        if (answer) {
+        var confirmed = confirm("Are you sure you want to delete this item?");
+        if (confirmed) {
             $.ajax({
                 url: $(event.target).attr("href"),
                 type: "DELETE",
