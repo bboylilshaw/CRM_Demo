@@ -5,10 +5,7 @@ import com.hp.crm.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,14 +41,16 @@ public class UserController {
         return "redirect:/user/home";
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
     public String deleteUser(@PathVariable long id) {
         try {
             userService.deleteUser(id);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "redirect:/user/home";
+        //return "redirect:/user/home";
+        return "ok";
     }
 
 }

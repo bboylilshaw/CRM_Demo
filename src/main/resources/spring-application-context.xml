@@ -83,4 +83,8 @@
             </props>
         </property>
     </bean>-->
+
+    <!-- 导入其他beans.xml配置文件 -->
+    <import resource="spring-exception-resolver.xml" />
+
 </beans>

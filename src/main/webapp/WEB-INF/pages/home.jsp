@@ -43,8 +43,8 @@
                     <td>${user.lastName}</td>
                     <td>${user.email}</td>
                     <td>
-                        <a href="user/${user.id}" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                        <a href="user/delete/${user.id}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                        <a href="user/${user.id}" id="editBtn" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a href="user/delete/${user.id}" id="deleteBtn" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
                     </td>
                 </tr>
             </c:forEach>
